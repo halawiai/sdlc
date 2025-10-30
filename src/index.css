@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Import React Flow styles first */
+@import 'reactflow/dist/style.css';
+
+/* Custom React Flow styles */
+.react-flow__handle {
+  width: 10px;
+  height: 10px;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+  background: #555;
+  border: 2px solid #fff;
+  cursor: crosshair;
+}
+
+.react-flow__node:hover .react-flow__handle {
+  opacity: 1;
+}
+
+.react-flow__handle.react-flow__handle-connecting {
+  opacity: 1;
+  background: #3b82f6;
+}
+
+.react-flow__handle[data-handletype="target"] {
+  background: #3b82f6;
+}
+
+.react-flow__edge-text {
+  font-weight: 600;
+}
+
+.react-flow__controls {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure nodes remain interactive */
+.react-flow__node {
+  cursor: grab;
+}
+
+.react-flow__node:active {
+  cursor: grabbing;
+}
+
+/* Ensure edges remain interactive */
+.react-flow__edge {
+  cursor: pointer;
+}
+
+.react-flow__edge.react-flow__edge-updating {
+  cursor: grabbing;
+}
+.react-flow__minimap {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Accessibility improvements */
+.react-flow__node:focus,
+.react-flow__edge:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Improved tooltips */
+[title] {
+  position: relative;
+}
+
+/* Better contrast for text */
+.text-gray-600 {
+  color: #4b5563;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+/* Focus indicators for interactive elements */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast */
+.bg-blue-50 {
+  background-color: #eff6ff;
+}
+
+.text-blue-800 {
+  color: #1e40af;
+}
+
+/* Improved hover states */
+.hover\:bg-gray-100:hover {
+  background-color: #f3f4f6;
+  transition: background-color 0.2s ease;
+}
+
+/* Better spacing for mobile */
+@media (max-width: 768px) {
+  .space-y-4 > * + * {
+    margin-top: 1rem;
+  }
+  
+  .gap-4 {
+    gap: 1rem;
+  }
+}

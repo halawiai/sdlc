@@ -1,0 +1,27 @@
+Current project state saved as Milestone 2 - Fixed dropdown navigation and improved Process Flow Test layout
+
+Key improvements made:
+- Fixed dropdown menu navigation with delayed closing (200ms timeout)
+- Improved Process Flow Test page with proper "down then split" logic
+- Added Solution Architecture (SA) convergence point
+- Implemented curved connectors from Owner decision to lanes
+- Added consistent arrow spacing and styling
+- Mounted SVG arrow markers once for better performance
+- Enhanced user experience with smooth dropdown interactions
+
+Layout improvements:
+- Discovery → Initiation (horizontal)
+- Vertical arrow down to Owner decision diamond
+- Curved splits from Owner to Enterprise/Product lanes
+- Both lanes converge to Solution Architecture (SA)
+- SA → Solution Development (Dev + QA parallel)
+- Final sequence: UAT → Release → Post Implementation → Closure
+
+Technical fixes:
+- Added dropdownTimeoutRef for managing menu timeouts
+- Implemented handleDropdownMouseEnter/Leave functions
+- Proper cleanup of timeouts on component unmount
+- Consistent gap-3 spacing throughout flow
+- Single ArrowDefs component for all SVG markers
+
+Ready for further enhancements or can revert to this stable state if needed.
